@@ -17,12 +17,13 @@ namespace _161017.Controllers
         {
             return View();
         }
-        public ActionResult list()
+        public ActionResult list(int page)
         {
             string[] data = new string[] {
                 "李克强：奋力开创东北全面振兴新局面","神十一与天宫对接成功 航天员“入宫”","这些作品影响习近平数十年"
             };
             ViewBag.data = data;
+            ViewBag.Page = page;
             return View();
         }
         public ActionResult About()
@@ -38,5 +39,12 @@ namespace _161017.Controllers
 
             return View();
         }
+        public ActionResult Add()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
     }
 }
